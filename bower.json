@@ -1,0 +1,22 @@
+{
+  "name": "firebase_spike",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Yorkshireman/firebase_spike",
+  "authors": [
+    "Andrew Stelmach <andrew_stelmach@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.3.1"
+  },
+  "devDependencies": {
+    "firebase": "~2.3.1"
+  }
+}
