@@ -1,7 +1,9 @@
 describe('Firebase Spike', function() {
   it('has a name input box', function() {
-    browser.get('file:///home/andrew/projects/firebase_spike/index.html');
+  	browser.ignoreSynchronization = true;
+    browser.get('http://localhost:8080/index.html');
 
-    expect(browser.getTitle()).toEqual('Firebase Spike');
+    expect(element(by.id('nameInput')).getText()).
+    	toEqual('5');
   });
 });
