@@ -2,6 +2,7 @@ describe('Firebase Spike', function() {
   var chai = require('chai');
   var chaiAsPromised = require('chai-as-promised');
   chai.use(chaiAsPromised);
+  var expect = chai.expect;
 
   var nameBox = element(by.id('nameInput'))
   var messageBox = element(by.id('messageInput'))
@@ -17,20 +18,16 @@ describe('Firebase Spike', function() {
   })
 
   it('has a name input box', function() {
-    var expect = chai.expect;
-    expect(element(by.id('nameInput')).isPresent()).toBe(true);
+    expect(element(by.id('nameInput'))).to.exist;
   });
 
   it('has a message input box', function() {
-  	expect(element(by.id('messageInput')).isPresent()).toBe(true);
-  })
+  	expect(element(by.id('messageInput'))).to.exist;
+  });
 
   it('user can write messages', function() {
-    var expect = chai.expect;
-
     nameBox.sendKeys('Andy');
     messageBox.sendKeys('message');
-
     messageBox.sendKeys(protractor.Key.ENTER);
 
     expect(messagesDiv.getText()).to.eventually.contain('Andy');
