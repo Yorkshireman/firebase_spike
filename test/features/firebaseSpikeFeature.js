@@ -17,6 +17,7 @@ describe('Firebase Spike', function() {
   })
 
   it('has a name input box', function() {
+    var expect = chai.expect;
     expect(element(by.id('nameInput')).isPresent()).toBe(true);
   });
 
