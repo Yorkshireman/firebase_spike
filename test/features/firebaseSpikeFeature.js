@@ -13,9 +13,9 @@ describe('Firebase Spike', function() {
   	browser.ignoreSynchronization = false;
   })
 
-  // it('has a name input box', function() {
-  //   expect(element(by.id('nameInput')).isPresent()).toBe(true);
-  // });
+  it('has a name input box', function() {
+    expect(element(by.id('nameInput')).isPresent()).toBe(true);
+  });
 
   // it('has a message input box', function() {
   // 	expect(element(by.id('messageInput')).isPresent()).toBe(true);
